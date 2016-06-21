@@ -27,9 +27,9 @@ echo "Please answer by numbers before the choices :D."
 read choices;
 
 case $choices in
-1) echo "You have chosen to download an MCPE Server Installer!" && echo "Installing it right now!" && wget http://ws.captainduck.xyz/uploads/5/4/8/6/54868769/mcpeinstall.sh >/dev/null 2>&1 && echo "Successfully installed! Now giving permissions.." && chmod +x mcpeinstall.sh && echo "Oh and don't forget that we need to create a screen to where we create our server, (Don't know Screens? https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/).. (Tmux will also work) To create a screen: screen -S (screen name)" echo "If you have problems, or suggestions regarding the installer, please report it directly from this page, https://github.com/CaptainDuck/MCPE-Server-Installers
+1) echo "You have chosen to download an MCPE Server Installer!" && echo "Installing it right now!" && wget http://ws.captainduck.xyz/uploads/5/4/8/6/54868769/mcpeinstall.sh >/dev/null 2>&1 && echo "Successfully installed! Now giving permissions.." && chmod +x mcpeinstall.sh && echo "Oh and don't forget that we need to create a screen to where we create our server, (Don't know Screens? https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/).. (Tmux will also work) To create a screen: screen -S (screen name)" echo "If you have problems, or suggestions regarding the installer, please report it directly from this page, https://github.com/CaptainDuck/MCPE-Server-Installers"
 if [ -f mcpeinstall.sh ]; then
-    echo "echo "The installer has been installed! Now do ./mcpeinstall.sh to run the installer/script!"
+    echo "The installer has been installed! Now do ./mcpeinstall.sh to run the installer/script!"
 else
     echo "Oh no! something went wrong! You don't have the Installer File! Maybe try it again?"
 fi;;
@@ -43,6 +43,11 @@ echo "4) Informational.."
 echo "5) Random Related.."
 echo "6) Exit.."
 read categories;
+
+3) echo "You have chosen to know the Developer Infomation!" && echo "$BLUE Developer/Maker of Script: CaptainDuck, Website: http://captainduck.xyz, GitHub: https://github.com/CaptainDuck.";;
+
+4) exit
+esac
 
 case $categories in
 1) echo "You have chosen the PVP Related Category! Choose the Plugins below to download!";;
